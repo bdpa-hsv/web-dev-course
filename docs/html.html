@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lesson 1 · BDPA Web Dev</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Introduction to HTML! "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Lesson 1 · BDPA Web Dev"/><meta property="og:type" content="website"/><meta property="og:url" content="https://bdpa-hsv.github.io/web-dev-courseindex"/><meta property="og:description" content="# Introduction to HTML! "/><meta property="og:image" content="https://bdpa-hsv.github.io/web-dev-course/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://bdpa-hsv.github.io/web-dev-course/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/web-dev-courseimg/power.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/web-dev-coursejs/scrollSpy.js"></script><link rel="stylesheet" href="/web-dev-coursecss/main.css"/><script src="/web-dev-coursejs/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/web-dev-course"><img class="logo" src="/web-dev-courseimg/power.png" alt="BDPA Web Dev"/><h2 class="headerTitleWithLogo">BDPA Web Dev</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/web-dev-coursehelp" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Lesson 1</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Lesson 1</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/web-dev-coursedocs/html">Getting Started With HTML</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Lesson 2</h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-dev-coursedocs/css">Getting Started With CSS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Lesson 3</h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-dev-coursedocs/js-1">Getting Started With Javascript</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Lesson 4</h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-dev-coursedocs/js-2">More Javascript</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Lesson 5</h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-dev-coursedocs/react-1">Getting Started with React</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Lesson 6</h3><ul class=""><li class="navListItem"><a class="navItem" href="/web-dev-coursedocs/react-2">React Again</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Lesson 1</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="introduction-to-html"></a><a href="#introduction-to-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction to HTML!</h1>
+<p>In order to work with HTML / CSS / Javascrip / etc. we're going to need to use some special tools!</p>
+<h3><a class="anchor" aria-hidden="true" id="vs-code"></a><a href="#vs-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VS Code:</h3>
+<p>​   VS Code is a lightweight editor for code that has syntax highlighting! This may not seem like much now, but this will become incredibly helpful when you start building more and more complex sites!</p>
+<h3><a class="anchor" aria-hidden="true" id="a-github-account"></a><a href="#a-github-account" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A Github Account:</h3>
+<p>​   Git is a powerful tool for version control (that we'll use much later into the course). Github is a site that allows for us to upload our code for free AND they host websites for free! This is where we'll host all of our code (you're looking at a github io site right now)!</p>
+<h3><a class="anchor" aria-hidden="true" id="a-codepenio-account"></a><a href="#a-codepenio-account" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A Codepen.io Account:</h3>
+<p>​   Codepen allows for us to make really quick changes to code blocks (HTML, CSS, and Javascript) to see how they render. This is incredibly helpful for testing out small chunks of code before we add them to our sites.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-html"></a><a href="#what-is-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is HTML?</h2>
+<p>​   Now that we've gotten all of the hard boring stuff out of the way, let's explore what HTML is. HTML stands for <strong>Hyper-Text Markup Language</strong>. When you think of a coding language, you may think of something that looks like:</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> sayHello = <span class="hljs-function"><span class="hljs-params">personName</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello "</span>, personName)
+}
+</code></pre>
+<p>The code above is a type of javascript function (which we'll explore in a few weeks). HTML does not have functions like javascript.</p>
+<p>HTML creates and renders a document for our web browsers to read (Chrome, Firefox, Safari, Internet Explorer, etc.). The way that HTML renders onto a page is through <strong>elements</strong> and <strong>attributes</strong>!</p>
+<h2><a class="anchor" aria-hidden="true" id="elements"></a><a href="#elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elements</h2>
+<p>Elements display content. They start with an opening tag and end with a closing tag.</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span> Here's some content inside my element <span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span>
+</code></pre>
+<p>The very first element that we see is the doctype element. The element stands alone at the top of the page that you want to render. This tells your browser that the page it's looking at is html.</p>
+<pre><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE&gt;</span>
+</code></pre>
+<p>The <strong>html</strong> element is where we put all the code:</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    ALL HTML CODE GOES HERE
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>The <strong>head</strong> element is where we put <em>header</em> elements, such as the page <em>title</em>. The head is where the <em>brains</em> of the site live!</p>
+<p>The <strong>body</strong> element is where all the html that we see rendered on a page lives!</p>
+<p>Some elements hold no content (like line breaks, horizontal rules, and images, but we'll get to those later):</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> /&gt;</span>
+</code></pre>
+<p>And remember:</p>
+<p><strong>ALWAYS CLOSE YOUR ELEMENTS!</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="block-elements"></a><a href="#block-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Block Elements</h3>
+<p>Elements take take up all the space from left to right are block elements! Many types of elements do this!</p>
+<p><code>&lt;div&gt;&lt;/div&gt;</code>,<code>&lt;p&gt; &lt;/p&gt;</code>,<code>&lt;table&gt; &lt;/table&gt;</code> and <code>&lt;hr /&gt;</code> are also block elements!</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  This takes up all the space it can from left to right!
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+    I also take up as much space as I can!
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>Block elements are greedy! Without using CSS, block elements take up as much space as they can! There are a lot of ways to get around this, but block elements</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/web-dev-coursedocs/css"><span>Getting Started With CSS</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-html">What is HTML?</a></li><li><a href="#elements">Elements</a><ul class="toc-headings"><li><a href="#block-elements">Block Elements</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/web-dev-course" class="nav-home"><img src="/web-dev-courseimg/favicon.ico" alt="BDPA Web Dev" width="66" height="58"/></a><div><h5>Docs</h5></div><div><h5>Community</h5><a href="/web-dev-courseen/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/web-dev-courseblog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/web-dev-courseimg/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 BDPA Huntsville</section></footer></div></body></html>
