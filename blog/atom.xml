@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bdpa-hsv.github.io/web-dev-course/blog</id>
-    <title>BDPA Web Dev Blog</title>
+    <title>BDPA Huntsville Blog</title>
     <updated>2017-10-24T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bdpa-hsv.github.io/web-dev-course/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest BDPA Web Dev news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest BDPA Huntsville news and events.</subtitle>
     <logo>https://bdpa-hsv.github.io/web-dev-course/img/power.png</logo>
     <rights>Copyright © 2020 BDPA Huntsville</rights>
     <entry>
