@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'BDPA Web Dev', // Title for your website.
   tagline: 'A website for learning web dovelopment',
   url: 'https://bdpa-hsv.github.io', // Your website URL
-  baseUrl: '/web-dev-course', // Base URL for your project */
+  baseUrl: '/web-dev-course/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -38,9 +38,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-
-    { page: 'help', label: 'Help' },
-
+      {page: 'help', label: 'Help'},
+      {doc: 'html', label: 'Docs'},
   ],
 
   // If you have users set above, you add it here:
