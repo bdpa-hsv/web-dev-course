@@ -1,0 +1,22 @@
+{
+  "docs": {
+    "Lesson 1": [
+      "html"
+    ],
+    "Lesson 2": [
+      "css"
+    ],
+    "Lesson 3": [
+      "js-1"
+    ],
+    "Lesson 4": [
+      "js-2"
+    ],
+    "Lesson 5": [
+      "react-1"
+    ],
+    "Lesson 6": [
+      "react-2"
+    ]
+  }
+}
