@@ -96,8 +96,10 @@ class Index extends React.Component {
       <div
         className="productShowcaseSection paddingBottom"
         style={{ textAlign: 'center' }}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
+        <h2>Reasons to Learn Web Development</h2>
+        <MarkdownBlock>Everything is going to the web</MarkdownBlock>
+        <MarkdownBlock>Pretend you are smarter than everyone</MarkdownBlock>
+        <MarkdownBlock>Get Paid BOOKOO BUCKS</MarkdownBlock>
       </div>
     );
 
@@ -106,12 +108,12 @@ class Index extends React.Component {
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
+              ` Javascript is hugely in demand. In fact, it’s one of the most in-demand languages of the year and 
+              is likely to remain so for some time. It has almost become a prerequisite for most technical roles 
+              these days and serves as a great foundation to help you keep up with other in-demand languages. `,
+            image: `${baseUrl}img/undraw_dev_productivity_umsq.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            title: 'Learn to Code Like the Pros',
           },
         ]}
       </Block>
@@ -122,10 +124,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
+              'React is one of the most popular front end development frameworks. Facebook, Instagram, and Netflix are all built using React',
+            image: `${baseUrl}img/undraw_social_girl_562b.svg`,
             imageAlign: 'right',
-            title: 'Description',
+            title: 'Learn to Develop the React Way',
           },
         ]}
       </Block>
@@ -135,11 +137,14 @@ class Index extends React.Component {
       <Block background="dark">
         {[
           {
-            content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+            content: `HTML and CSS are the frameworks used to build websites. 
+            If you can understand how they work together, you’re much better off when it comes to design, 
+            marketing, and several other professions. You don’t need to be an expert, but being able to understand 
+            how to utilize these languages can help you build an optimized, user-friendly website for your business. 
+            Without knowing at least the basics, you’ll struggle for better results.`,
+            image: `${baseUrl}img/undraw_online_everywhere_cd90.svg`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'Learn The Building Blocks of Web Development',
           },
         ]}
       </Block>
@@ -149,7 +154,7 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'Highschool Coding Competion',
+            content: 'High School Coding Competion',
             image: `${baseUrl}img/undraw_react.svg`,
             imageAlign: 'top',
             title: 'HSCC',
@@ -202,7 +207,7 @@ class Index extends React.Component {
           <LearnHow />
           <TryOut />
           <Description />
-          <Showcase />
+          {/* <Showcase /> */}
         </div>
       </div>
     );

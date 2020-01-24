@@ -37,15 +37,18 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            {/* <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <a href={this.docUrl('html.html', this.props.language)}>
+              HTML Tutorial
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href={this.docUrl('css.html', this.props.language)}>
+             CSS Tutorial
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
-            </a> */}
+            <a href={this.docUrl('javascript-1.html', this.props.language)}>
+              Javascript Tutorial
+            </a>
+            <a href={this.docUrl('react-1.html', this.props.language)}>
+              React Tutorial
+            </a>
           </div>
           <div>
             <h5>Community</h5>
@@ -58,7 +61,7 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            {/* <a href="https://discordapp.com/">Project Chat</a> */}
             <a
               href="https://twitter.com/"
               target="_blank"
@@ -105,7 +108,7 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <a
+        {/* <a
           href="https://opensource.facebook.com/"
           target="_blank"
           rel="noreferrer noopener"
@@ -116,7 +119,7 @@ class Footer extends React.Component {
             width="170"
             height="45"
           />
-        </a>
+        </a> */}
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );

@@ -11,7 +11,7 @@
 // List of projects/orgs using your project for the users page.
 const users = [
   {
-    caption: 'User1',
+    // caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/image.jpg'.
     image: '/img/undraw_open_source.svg',
@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'BDPA Web Dev', // Title for your website.
-  tagline: 'A website for learning web dovelopment',
+  title: 'BDPA Huntsville', // Title for your website.
+  tagline: 'Black Digital Professional Association',
   url: 'https://bdpa-hsv.github.io', // Your website URL
   baseUrl: '/web-dev-course/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -38,8 +38,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'html', label: 'Lesson Plans'},
       {page: 'help', label: 'Help'},
-      {doc: 'html', label: 'Docs'},
+
   ],
 
   // If you have users set above, you add it here:
@@ -47,7 +48,7 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/power.png',
-  footerIcon: 'img/favicon.ico',
+  footerIcon: 'img/power.png',
   favicon: 'img/power.png',
 
   /* Colors for website */
